@@ -17,15 +17,15 @@
   ],
   "main": "index.js",
   "engines": {
-    "node": ">=8.6.0"
+    "node": ">=8.9.4"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
     "test-offline": "standard && ava",
     "coverage": "nyc ava",
     "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
-    "setup": "npm install",
-    "standard-fix": "standard --fix"
+    "standard-fix": "standard --fix",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [
     "bigfive",
@@ -34,12 +34,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zrrrzzt/b5-result-text.git"
+    "url": "git+https://github.com/zrrrzzt/b5-result-text.git"
   },
   "bugs": {
     "url": "https://github.com/zrrrzzt/b5-result-text/issues"
   },
-  "homepage": "https://github.com/zrrrzzt/b5-result-text",
+  "homepage": "https://github.com/zrrrzzt/b5-result-text#readme",
   "devDependencies": {
     "ava": "0.25.0",
     "coveralls": "3.0.0",

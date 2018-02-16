@@ -1,9 +1,7 @@
-'use strict'
-
 const getTemplate = require('./lib/get-template')
 const generateResult = require('./lib/generate-result')
 
-module.exports = data => {
+module.exports = function (data) {
   if (!data) {
     throw new Error('Missing required input')
   }

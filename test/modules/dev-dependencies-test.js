@@ -4,7 +4,7 @@
 const test = require('ava')
 const pkg = require('../../package.json')
 const dependencies = pkg.devDependencies || {}
-const dropModules = []
+const dropModules = ['nsp']
 const isDropped = (module) => !dropModules.includes(module)
 
 Object.keys(dependencies).filter(isDropped).forEach((dependency) => {

@@ -117,6 +117,7 @@ returns
 ## Related
 
 - [bigfive-web](https://github.com/maccyber/bigfive-web) Web frontend for bigfive tests
+- [b5-web](https://github.com/zrrrzzt/b5-web) Standalone website for bigfive tests
 
 
 ## Supported languages
@@ -147,5 +148,5 @@ If you want to help by translating the results to another language this is how y
 
 Created with <3 by [zrrzzt](https://github.com/zrrrzzt) and [maccyber](https://github.com/maccyber)
 
-![alt text](https://robots.kebabstudios.party/zrrrzzt.png "Robohash image of zrrrzzt") 
-![alt text](https://robots.kebabstudios.party/maccyber.png "Robohash image of maccyber")
+![Robohash image of zrrrzzt](https://robots.kebabstudios.party/zrrrzzt.png "Robohash image of zrrrzzt") 
+![Robohash image of maccyber](https://robots.kebabstudios.party/maccyber.png "Robohash image of maccyber")

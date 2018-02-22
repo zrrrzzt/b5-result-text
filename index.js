@@ -1,5 +1,6 @@
 const getTemplate = require('./lib/get-template')
 const generateResult = require('./lib/generate-result')
+const languages = require('./lib/data/languages.json')
 
 module.exports = data => {
   if (!data) {
@@ -17,4 +18,10 @@ module.exports = data => {
   }
 
   return generateResult(data.scores, template)
+}
+
+module.exports.getInfo = () => {
+  return {
+    languages: languages
+  }
 }

@@ -1,6 +1,10 @@
 const test = require('ava')
-const getTemplate = require('../../lib/get-template')
+const { getTemplate } = require('../../index')
 const expectedTemplate = require('../data/get-template-no.json')
+
+test('it returns template for en as default', t => {
+  t.truthy(getTemplate(), 'en ok')
+})
 
 test('it returns template for en', t => {
   t.truthy(getTemplate('en'), 'en ok')

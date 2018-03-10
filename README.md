@@ -20,7 +20,7 @@ Default language is English (en) but Norwegian (no) is supported as well.
 
 ```JavaScript
 const getResult = require('b5-result-text')
-const { getInfo } = require('b5-result-text')
+const { getInfo, getTemplate } = require('b5-result-text')
 const scores = {
      'A': {
        'score': 6,
@@ -54,6 +54,8 @@ const scores = {
    }
 
 console.log(getInfo()) // returns modules info
+
+console.log(getTemplate('en')) // returns template for language
 
 const results = getResult({scores: scores, lang: 'no'})
 
@@ -126,7 +128,7 @@ returns
 | Code | Name      | Translator |
 | ---- | --------- | ---------- |
 | en   | English   |            |
-| no   | Norwegian | Eli Huseby |
+| no   | Norsk | Eli Huseby |
 
 ## Help wanted
 

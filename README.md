@@ -20,7 +20,6 @@ Default language is English (en) but Norwegian (no) is supported as well.
 
 ```JavaScript
 const getResult = require('b5-result-text')
-const { getInfo, getTemplate } = require('b5-result-text')
 const scores = {
      'A': {
        'score': 6,
@@ -52,10 +51,6 @@ const scores = {
        }
      }
    }
-
-console.log(getInfo()) // returns modules info
-
-console.log(getTemplate('en')) // returns template for language
 
 const results = getResult({scores: scores, lang: 'no'})
 
@@ -115,6 +110,20 @@ returns
     'text': 'Ditt resultat på ekstroversjon er <b>gjennomsnittlig</b>, noe som tyder på at du verken foretrekker å\n<br>\nvære alene eller en godmodig pratemaker. Du liker å være med andre, samtidig som du også setter pris på alene-tid.'
   }
 ]
+```
+
+### Extras
+
+```JavaScript
+const { getInfo, getTemplate, getDomain, getFacet } = require('b5-result-text')
+
+console.log(getInfo()) // returns modules info
+
+console.log(getTemplate('no')) // returns template for language
+
+console.log(getDomain({language: 'no', domain: 'O'})) // returns content of a domain for given language
+
+console.log(getFacet({language: 'no', domain: 'O', facet: 2})) // returns content of a facet for a given domain and language
 ```
 
 ## Related

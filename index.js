@@ -31,3 +31,5 @@ module.exports.getTemplate = (language = 'en') => {
 }
 
 module.exports.getDomain = require('./lib/get-domain')
+
+module.exports.getFacet = require('./lib/get-facet')

@@ -29,3 +29,5 @@ module.exports.getInfo = () => {
 module.exports.getTemplate = (language = 'en') => {
   return getTemplate(language)
 }
+
+module.exports.getDomain = require('./lib/get-domain')

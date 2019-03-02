@@ -13,7 +13,7 @@ test('throws if missing options', t => {
 test('throws if missing input.language', t => {
   const expectedErrorMessage = 'Missing required input: options.language'
   const error = t.throws(() => {
-    getDomain({language: false})
+    getDomain({ language: false })
   }, Error)
 
   t.is(error.message, expectedErrorMessage)
@@ -22,7 +22,7 @@ test('throws if missing input.language', t => {
 test('throws if missing input.domain', t => {
   const expectedErrorMessage = 'Missing required input: options.domain'
   const error = t.throws(() => {
-    getDomain({language: 'en', domain: false})
+    getDomain({ language: 'en', domain: false })
   }, Error)
 
   t.is(error.message, expectedErrorMessage)
@@ -31,20 +31,20 @@ test('throws if missing input.domain', t => {
 test('throws if non existent lang', t => {
   const expectedErrorMessage = 'Template not found'
   const error = t.throws(() => {
-    getDomain({language: 'xx', domain: 'o'})
+    getDomain({ language: 'xx', domain: 'o' })
   }, Error)
 
   t.is(error.message, expectedErrorMessage)
 })
 
 test('returns empty for non existing domain', t => {
-  const result = getDomain({language: 'en', domain: 'x'})
+  const result = getDomain({ language: 'en', domain: 'x' })
   t.falsy(result, 'result falsy ok')
 })
 
 test('returns expected result', t => {
   const expectedResult = require('../../lib/data/en/openness_to_experience')
-  const result = getDomain({language: 'en', domain: 'o'})
+  const result = getDomain({ language: 'en', domain: 'o' })
 
   t.deepEqual(expectedResult, result, 'result ok')
 })
